@@ -1,0 +1,17 @@
+html
+	head
+		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+	body(class="ml-2")
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light
+			a.navbar-brand(href='#') Coder.Japan
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarNavDropdown.collapse.navbar-collapse
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(href='/')| Home 
+					li.nav-item
+						a.nav-link(href='/Users') Users
+		.container.pt-5
+			block content
+

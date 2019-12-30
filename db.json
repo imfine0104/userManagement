@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "Vuong",
+      "age": "20",
+      "id": "s9g9ONCV"
+    },
+    {
+      "name": "Chin",
+      "age": "15",
+      "id": "2ts6eJ8g"
+    },
+    {
+      "name": "Wai",
+      "age": "25",
+      "id": "5SRyFS20"
+    },
+    {
+      "name": "Nghia",
+      "age": "50",
+      "id": "KdpUiX3q"
+    },
+    {
+      "name": "Thang",
+      "age": "25",
+      "id": "GTMRbdHM"
+    },
+    {
+      "name": "Trinh",
+      "age": "25",
+      "id": "fdRa_3oK"
+    }
+  ]
+}

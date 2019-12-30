@@ -1,0 +1,51 @@
+var db = require('../db');
+var shortid = require('shortid');
+
+module.exports.index = function(req, res){
+	res.render('./users/index', {
+		users: db.get('users').value()
+	});
+};
+
+module.exports.getSearch = function(req, res){
+	var q = req.query.q;
+	var result = db.get('users').value().filter(function(user){
+		return user.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+	});
+	res.render('users/index', {
+		users: result,
+		value: q
+	});
+};
+
+module.exports.create = function(req, res){
+	res.render('users/create');
+};
+
+module.exports.getId =  function(req, res){
+	var id = req.params.id;
+	var user = db.get('users').find({ id: id}).value();
+	res.render('users/view', {
+		user: user
+	});
+};
+
+module.exports.postCreate = function(req, res){
+	req.body.id = shortid.generate();
+	var erorrs = [];
+	if(!req.body.name){
+		erorrs.push('Name is required');
+	}
+	if(!req.body.age){
+		erorrs.push('Age is required');
+	}
+	if(erorrs.length){
+		res.render('users/create', {
+			erorrs: erorrs,
+			values: req.body
+		});	
+		return;
+	}
+	db.get('users').push(req.body).write();
+	res.redirect('/users');
+};

@@ -1,0 +1,18 @@
+extends ../layouts/commom
+
+block content
+	h2 User list
+	.d.flex.align-items-center
+		a.btn.btn-primary(href="/users/create") Create
+		form.mt-auto(action="/users/search", method="GET", class="d-flex pt-2")
+			input(type="text", name="q", class="ml-2", value=value ? value : '')
+			button(class="ml-2 btn btn-primary") Search
+	table.table
+		tr
+			th Name
+			th Action
+		each user in users
+			tr
+				td= user.name
+				td
+					button(onclick='window.location.href ="/users/' + user.id + '"', class="btn btn-primary") View
