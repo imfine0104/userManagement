@@ -16,3 +16,6 @@ block content
 				td= user.name
 				td
 					button(onclick='window.location.href ="/users/' + user.id + '"', class="btn btn-primary") View
+
+	if user
+		p= user.user
