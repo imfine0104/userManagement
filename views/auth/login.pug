@@ -1,0 +1,18 @@
+extends ../layouts/commom
+
+block content
+	h2 Login
+
+	if erorrs
+		each erorr in erorrs
+			.alert.alert-danger= erorr
+
+	form(action="/auth/login", method="POST")
+		form-group
+			label(for="name") User name
+			input#name.form-control(name="username", type="text", class="ml-2", value=values ? values.username : '')
+			br
+			label(for="age") Password
+			input#age.form-control(name="password", type="password", class="ml-2", value=values ? values.password : '')
+			br
+			button(class="btn btn-primary") Login

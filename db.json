@@ -45,5 +45,12 @@
       "age": "30",
       "id": "JC5-e6nz"
     }
+  ],
+  "auth": [
+    {
+      "user": "admin",
+      "password": "admin",
+      "id": "psioubgr"
+    }
   ]
 }

@@ -1,5 +1,7 @@
 var express = require('express');
 var userRoute = require('./routes/user.route');
+var authRoute = require('./routes/auth.route');
+var authMiddleware = require('./middlewares/auth.middleware');
 var cookieParser = require('cookie-parser');
 
 
@@ -14,7 +16,6 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.get('/',function(req, res){
-	res.cookie('user-id','12345');
 	res.render('index', {
 		name: 'in my life ^^'
 	});
@@ -23,7 +24,8 @@ app.get('/',function(req, res){
 
 app.use(express.static('public'));
 
-app.use('/users', userRoute);
+app.use('/users', authMiddleware.requireAuth, userRoute);
+app.use('/auth', authRoute);
 
 app.listen(port, function(){
 	console.log('Sever listening on port ' + port);
