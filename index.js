@@ -2,6 +2,7 @@ require('dotenv').config();
 var express = require('express');
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
+var productsRoute = require('./routes/products.route');
 var authMiddleware = require('./middlewares/auth.middleware');
 var cookieParser = require('cookie-parser');
 
@@ -26,6 +27,8 @@ app.use(express.static('public'));
 
 app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);
+app.use('/products', authMiddleware.requireAuth, productsRoute);
+
 
 app.listen(port, function(){
 	console.log('Sever listening on port ' + port);
