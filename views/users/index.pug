@@ -2,10 +2,10 @@ extends ../layouts/commom
 
 block content
 	h2 User list
-	.d.flex.align-items-center
-		a.btn.btn-primary(href="/users/create") Create
-		form.mt-auto(action="/users/search", method="GET", class="d-flex pt-2")
-			input(type="text", name="q", class="ml-2", value=value ? value : '')
+		a.btn.btn-primary.ml-2(href="/users/create") Create
+	.d-flex.align-items-center
+		form.ml-auto(action="/users/search", method="GET", class="d-flex")
+			input(type="text", name="q", class="form-control", value=value ? value : '')
 			button(class="ml-2 btn btn-primary") Search
 	table.table
 		tr

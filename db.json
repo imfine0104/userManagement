@@ -654,5 +654,53 @@
       "image": "https://loremflickr.com/320/240",
       "discription": "parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus"
     }
+  ],
+  "sessions": [
+    {
+      "id": "j6yRtxD_",
+      "cart": {
+        "9a3692ef-c9ab-49e3-9bef-4824f5eba8a7": 5,
+        "4a4e1d05-ee96-472c-b4f9-75091c7e63d0": 3,
+        "ee595162-5292-461f-a796-bca78215b62b": 4,
+        "4ad15c39-7e86-4858-a055-19f86a52df36": 1
+      }
+    },
+    {
+      "id": "Oa0o1rUb",
+      "cart": {
+        "9a3692ef-c9ab-49e3-9bef-4824f5eba8a7": 4,
+        "ee595162-5292-461f-a796-bca78215b62b": 2
+      }
+    },
+    {
+      "id": "swGHiQQC",
+      "cart": {
+        "9a3692ef-c9ab-49e3-9bef-4824f5eba8a7": 1
+      }
+    },
+    {
+      "id": "O-3kWDnD",
+      "cart": {
+        "9a3692ef-c9ab-49e3-9bef-4824f5eba8a7": 1
+      }
+    },
+    {
+      "id": "9CNViBao"
+    },
+    {
+      "id": "EzqRXvbn",
+      "cart": {
+        "9a3692ef-c9ab-49e3-9bef-4824f5eba8a7": 1
+      }
+    },
+    {
+      "id": "zmqOnID9",
+      "cart": {
+        "9a3692ef-c9ab-49e3-9bef-4824f5eba8a7": 2
+      }
+    },
+    {
+      "id": "eJI9LpQg"
+    }
   ]
 }
